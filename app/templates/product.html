@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Список товаров</h2>
+
+<ul>
+    {% for product in products %}
+        <li>
+            {{ product.name }} - {{ product.price }} руб. ({{ product.quantity }} в наличии)
+            <form action="{{ url_for('add_to_cart', product_id=product.id) }}" method="post">
+                <label for="quantity_{{ product.id }}">Количество:</label>
+                <input type="number" name="quantity" id="quantity_{{ product.id }}" min="1" value="1" required>
+                <button type="submit">Добавить в заказ</button>
+            </form>
+        </li>
+    {% endfor %}
+</ul>
+
+{% if messages %}
+    <div>
+        {% for message in messages %}
+            <p class="{% if message.category %}{{ message.category }}{% endif %}">{{ message }}</p>
+        {% endfor %}
+    </div>
+{% endif %}
+{% endblock %}

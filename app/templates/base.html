@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ветеринарная аптека ВетЭксперт</title>
+   <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <h1>Ветеринарная аптека ВетЭксперт</h1>
+        <nav>
+            <p><a href="{{ url_for('base') }}">Главная</a></p>
+            <p><a href="{{ url_for('register') }}">Регистрация</a></p>
+            <p><a href="{{ url_for('login') }}">Вход</a></p>
+            <p><a href="{{ url_for('logout') }}">Выход</a></p>
+            <p><a href="{{ url_for('order_view') }}">Заказ</a></p>
+            <p><a href="{{ url_for('product') }}">Товары</a></p>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <div class="footer">© 2024 ВетЭксперт</div>
+</body>
+</html>
