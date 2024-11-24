@@ -10,8 +10,8 @@
     </ul>
 
     <!-- Кнопка оформления заказа -->
-    <form method="POST" action="{% url 'order_create' %}">
-        {% csrf_token %}
+    <form method="POST" action="{{ url_for ('order_create') }}">
+
         <button type="submit">Оформить заказ</button>
     </form>
 {% else %}

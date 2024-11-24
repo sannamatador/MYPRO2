@@ -68,6 +68,8 @@ def order_view():
     user_id = session['user_id']
     try:
         user = User.query.get(user_id)  # Получаем пользователя
+        if user is None:
+            return redirect(url_for('login'))
         cart = session.get('cart', {})  # Получаем корзину из сессии
 
         # Получаем информацию о товарах в корзине
@@ -100,11 +102,12 @@ def order_create():
             if product:
                 # Создаем новый заказ
                 order = Order(user=user, product=product, quantity=quantity, status='completed')
-                order.save()
+                db.session.add(order)  # Добавляем заказ в сессию
+                db.session.commit()  # Сохраняем изменения в базе данных
 
                 # Уменьшаем количество товара после оформления заказа
                 product.quantity -= quantity
-                product.save()  # Сохранение обновленного количества товара
+                db.session.commit()  # Сохраняем изменения в базе данных для продукта
 
         # Очищаем корзину после оформления заказа
         session.pop('cart', None)
@@ -112,7 +115,6 @@ def order_create():
         return redirect(url_for('order_success'))  # Перенаправляем на успешное оформление заказа
 
     return redirect(url_for('product'))  # Возвращаем, если метод не POST
-
 
 @app.route('/add_to_cart/<int:product_id>', methods=['POST'])
 def add_to_cart(product_id):

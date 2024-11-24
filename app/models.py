@@ -1,5 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 
+
 db = SQLAlchemy()
 
 
@@ -41,6 +42,7 @@ class Order(db.Model):
     id = db.Column(db.Integer, primary_key=True)  # Добавьте первичный ключ
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     product_id = db.Column(db.Integer, db.ForeignKey('products.id'), nullable=False)
+    product_name = db.Column(db.String(255), nullable=False)
     quantity = db.Column(db.Integer, default=1)  # Количество
     status = db.Column(db.String(20), default='pending')
     created_at = db.Column(db.DateTime, server_default=db.func.now())  # Время создания заказа
