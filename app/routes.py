@@ -107,7 +107,7 @@ def order_create():
                     quantity=quantity,
                     status='completed',
                     product_name=product.name,
-                    total_price=product.price*quantity,
+                    total_price=product.price * quantity,
                 )
                 db.session.add(order)  # Добавляем заказ в сессию
                 db.session.commit()  # Сохраняем изменения в базе данных
@@ -122,6 +122,7 @@ def order_create():
         return redirect(url_for('order_success'))  # Перенаправляем на успешное оформление заказа
 
     return redirect(url_for('product'))  # Возвращаем, если метод не POST
+
 
 @app.route('/add_to_cart/<int:product_id>', methods=['POST'])
 def add_to_cart(product_id):
@@ -152,6 +153,3 @@ def add_to_cart(product_id):
 @app.route('/order/success')
 def order_success():
     return render_template('order_create.html')
-
-
-
