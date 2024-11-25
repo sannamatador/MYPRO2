@@ -6,7 +6,7 @@ from forms import RegistrationForm
 from models import Product, Order, User
 
 
-@app.route('/')
+@app.route('/')  # Главная страница, загрузка базового шаблона
 def base():
     return render_template('base.html')
 
@@ -32,10 +32,10 @@ def login():
 @app.route('/logout')
 def logout():
     # Удаление всех данных из сессии
-    session.clear()  # или session.pop('ключ_сессии', None) для удаления конкретного ключа
+    session.clear()
 
     # Перенаправление на главную страницу
-    return redirect(url_for('base'))  # Предполагая, что главная страница имеет маршрут 'index'
+    return redirect(url_for('base'))
 
 
 @app.route('/register/', methods=['GET', 'POST'])
@@ -50,17 +50,17 @@ def register():
         db.session.add(new_user)
         db.session.commit()
         flash("Вы успешно зарегистрировались!", "success")
-        return redirect(url_for('base'))  # Перенаправление на главную страницу
+        return redirect(url_for('base'))
     return render_template('register.html', form=form)
 
 
-@app.route('/products')
+@app.route('/products') # Список товаров
 def product():
-    products = Product.query.all()  # Получение всех продуктов
+    products = Product.query.all()
     return render_template('product.html', products=products)
 
 
-@app.route('/order', methods=['GET', 'POST'])
+@app.route('/order', methods=['GET', 'POST'])  # Просмотр заказа
 def order_view():
     if 'user_id' not in session:
         return redirect(url_for('login'))  # Если пользователь не авторизован, перенаправляем на страницу входа
@@ -85,7 +85,7 @@ def order_view():
         return redirect(url_for('login'))  # Если пользователь не найден, перенаправляем
 
 
-@app.route('/order/create', methods=['POST'])
+@app.route('/order/create', methods=['POST'])  # Оформление заказа
 def order_create():
     if request.method == "POST":
         user_id = session.get('user_id')
@@ -118,13 +118,12 @@ def order_create():
 
         # Очищаем корзину после оформления заказа
         session.pop('cart', None)
-        # flash("Ваш заказ оформлен! Спасибо за покупку.", "success")
         return redirect(url_for('order_success'))  # Перенаправляем на успешное оформление заказа
 
     return redirect(url_for('product'))  # Возвращаем, если метод не POST
 
 
-@app.route('/add_to_cart/<int:product_id>', methods=['POST'])
+@app.route('/add_to_cart/<int:product_id>', methods=['POST'])  #  Добавление товаров в заказ
 def add_to_cart(product_id):
     product = Product.query.get(product_id)  # Получаем товар по ID
 
@@ -150,6 +149,6 @@ def add_to_cart(product_id):
     return redirect(url_for('product'))  # Если GET-запрос, возвращаем на страницу
 
 
-@app.route('/order/success')
+@app.route('/order/success') # Успешное оформление
 def order_success():
     return render_template('order_create.html')

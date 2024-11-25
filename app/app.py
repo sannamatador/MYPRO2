@@ -9,7 +9,7 @@ from models import db, User, Product, Order
 from forms import RegistrationForm
 
 
-class UserModelView(ModelView):
+class UserModelView(ModelView):  # Пользовательский класс представления для редактирования таблицы User в админ панели
     form = RegistrationForm
 
     @expose('/user/new/', methods=['GET', 'POST'])
@@ -28,19 +28,19 @@ class UserModelView(ModelView):
         return self.render('new_user.html')
 
 
-app = Flask(__name__)
+app = Flask(__name__)  # Создание экземпляра приложения
 app.config.from_object(Config)
 app.secret_key = os.urandom(24)
 
-admin = Admin(app, name='Admin', template_mode='bootstrap3')
+admin = Admin(app, name='Admin', template_mode='bootstrap3')  #Создание админ-панели
 admin.add_view(UserModelView(User, db.session))
 admin.add_view(ModelView(Product, db.session))
 admin.add_view(ModelView(Order, db.session))
 
-db.init_app(app)
+db.init_app(app) # Инициация бд
 
 with app.app_context():
-    db.create_all()  # Создает таблицы в базе данных по моделям
+    db.create_all()  # Создание таблицы в базе данных по моделям
 
 if __name__ == '__main__':
     app.run(debug=True)
