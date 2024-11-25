@@ -101,7 +101,14 @@ def order_create():
 
             if product:
                 # Создаем новый заказ
-                order = Order(user=user, product=product, quantity=quantity, status='completed')
+                order = Order(
+                    user=user,
+                    product=product,
+                    quantity=quantity,
+                    status='completed',
+                    product_name=product.name,
+                    total_price=product.price*quantity,
+                )
                 db.session.add(order)  # Добавляем заказ в сессию
                 db.session.commit()  # Сохраняем изменения в базе данных
 
@@ -111,7 +118,7 @@ def order_create():
 
         # Очищаем корзину после оформления заказа
         session.pop('cart', None)
-        flash("Ваш заказ оформлен! Спасибо за покупку.", "success")
+        # flash("Ваш заказ оформлен! Спасибо за покупку.", "success")
         return redirect(url_for('order_success'))  # Перенаправляем на успешное оформление заказа
 
     return redirect(url_for('product'))  # Возвращаем, если метод не POST
