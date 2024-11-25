@@ -6,12 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e4803dc9-52be-461b-96a0-9e65b5c24291" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Скриншоты2/Вход.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Скриншоты2/Регистрация.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Скриншоты2/админ_список товаров.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Скриншоты2/заказ принят.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Скриншоты2/оформление заказа.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Скриншоты2/список товаров и добавление в корзину.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Скриншоты2/admin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Скриншоты2/cart_add.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Скриншоты2/create_order.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Скриншоты2/enter.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Скриншоты2/registration.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
