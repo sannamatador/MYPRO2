@@ -9,7 +9,7 @@
 - [Технологии](#технологии)
 - [Установка](#установка)
 - [Использование](#использование)
-
+- [Скриншоты](#скриншоты)
 
 ## Описание
 
@@ -82,17 +82,17 @@
 
 ### Регистрация
 
-![Регистрация](https://github.com/sannamatador/MYPRO2/blob/master/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%D1%8B2/registration.jpg)
+![Регистрация](https://github.com/sannamatador/MYPRO2/blob/master/Screenshots/registration.jpg)
 
 ### Вход
 
-![Регистрация](https://github.com/sannamatador/MYPRO2/blob/master/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%D1%8B2/enter.jpg)
+![Вход](https://github.com/sannamatador/MYPRO2/blob/master/Screenshots/enter.jpg)
 
 ### Добавление товара в корзину
 
-![Регистрация](https://github.com/sannamatador/MYPRO2/blob/master/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%D1%8B2/cart_add.jpg)
+![Добавление товара](https://github.com/sannamatador/MYPRO2/blob/master/Screenshots/cart_add.jpg)
 
 ### Админ-панель
 
-![Регистрация](https://github.com/sannamatador/MYPRO2/blob/master/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%D1%8B2/admin.jpg)
+![Админка](https://github.com/sannamatador/MYPRO2/blob/master/Screenshots/admin.jpg)
 
