@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4803dc9-52be-461b-96a0-9e65b5c24291" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/test_app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Скриншоты2/admin.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Скриншоты2/cart_add.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Скриншоты2/create_order.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Скриншоты2/enter.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Скриншоты2/registration.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/instance/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/app/instance/app.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/sqlalchemy/dialects/sqlite/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/sqlalchemy/dialects/sqlite/base.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -43,6 +42,8 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "DefaultHtmlFileTemplate": "HTML File",
+    "Python tests.Python tests in test.py.executor": "Run",
+    "Python tests.Python tests in test_app.py.executor": "Run",
     "Python.app.executor": "Run",
     "Python.models.executor": "Run",
     "Python.qqq.executor": "Run",
