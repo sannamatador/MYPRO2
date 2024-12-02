@@ -9,7 +9,7 @@
 - [Технологии](#технологии)
 - [Установка](#установка)
 - [Использование](#использование)
-
+- [Скриншоты](#скриншоты)
 
 ## Описание
 
@@ -80,5 +80,19 @@
 
 ## Скриншоты
 
-![Регистрация]()
+### Регистрация
+
+![Регистрация](https://github.com/sannamatador/MYPRO2/blob/master/Screenshots/registration.jpg)
+
+### Вход
+
+![Вход](https://github.com/sannamatador/MYPRO2/blob/master/Screenshots/enter.jpg)
+
+### Добавление товара в корзину
+
+![Добавление товара](https://github.com/sannamatador/MYPRO2/blob/master/Screenshots/cart_add.jpg)
+
+### Админ-панель
+
+![Админка](https://github.com/sannamatador/MYPRO2/blob/master/Screenshots/admin.jpg)
 
